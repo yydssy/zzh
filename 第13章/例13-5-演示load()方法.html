@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<video controls>
+    <source src="medias/volcano.Ogg" type='video/ogg'>
+	<source src="medias/volcano.mp4" type='video/mp4'>
+当前浏览器不支持视频播放。
+</video>
+<input type="button" value="载入新的视频" onClick="loadNewVideo()">
+<script>
+function loadNewVideo() {
+	var video = document.getElementsByTagName('video')[0];
+	var sources = video.getElementsByTagName('source');
+	sources[0].src = 'medias/volcano2.Ogg';
+	sources[1].src = 'medias/volcano2.mp4';
+	video.load(); 
+}	
+</script>
+</body>
+</html>
